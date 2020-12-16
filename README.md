@@ -1,14 +1,14 @@
-# Tested on VEGAS Pro 16 & newer.
+### Tested on VEGAS Pro 16 & newer.
 
-# Using velocity export script
+## Using velocity export script
 
 - Drop 'Script Menu' folder into your VEGAS Pro folder
 - In VEGAS Pro go to Tools > Scripting > Rescan Script Menu Folder
 - You should now find 'Export Velocity' under Tools > Scripting
 - Select your high FPS footage with velocity (including all cuts) and hit 'Export Velocity'
 
-# Using import scripts
-## Unreal Engine
+## Using import scripts
+### Unreal Engine
 - Inside Unreal, go to Edit > Plugins, look for 'Python Editor Script Plugin' and Enable it (might ask for restart)
 - Locate the level sequence you rendered for Velocity in VEGAS
 - Make sure the start/end frames are the same as the footage you worked with in VEGAS
