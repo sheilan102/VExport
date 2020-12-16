@@ -1,6 +1,6 @@
 ### Tested on VEGAS Pro 16 & newer.
 
-## Using velocity export script
+## Using export script
 
 - Drop 'Script Menu' folder into your VEGAS Pro folder
 - In VEGAS Pro go to Tools > Scripting > Rescan Script Menu Folder
