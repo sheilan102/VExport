@@ -1,4 +1,4 @@
-### Tested on VEGAS Pro 16 & newer.
+### Tested on VEGAS Pro 16
 
 ## Using export script
 
