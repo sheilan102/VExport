@@ -1,4 +1,4 @@
-### Tested on VEGAS Pro 16
+### Tested on VEGAS Pro 16 & Unreal Engine 4.26
 
 ## Using export script
 
