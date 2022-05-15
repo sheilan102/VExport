@@ -7,16 +7,17 @@ using System.Text;
 using System.Threading.Tasks;
 
 using System.Windows.Forms;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
+//using Newtonsoft.Json;
+//using Newtonsoft.Json.Linq;
 using ScriptPortal.Vegas;
 
 namespace velocity_export
 {
     public class EntryPoint
     {
-        public List<VideoCut> video_cuts = new List<VideoCut>();
-        private string videoName = "";
+        public Velocity veloSequence = new Velocity();
+
+        private string videoName { get; set; }
         public void FromVegas(Vegas myVegas)
         {
             // Loop over tracks
@@ -35,12 +36,10 @@ namespace velocity_export
                             // Video event
                             VideoEvent vevnt = (VideoEvent)evnt;
                             // Media name
-
                             var videoMedia = vevnt.ActiveTake.Media;
                             videoName = vevnt.ActiveTake.Name;
                             // Video envelope
                             Envelope VelEnv = FindVEEnvelope(vevnt, EnvelopeType.Velocity);
-                            // Check if video has envelope
                             cut.startFrame = (int)vevnt.ActiveTake.Offset.FrameCount;
                             // Total frames in vegas (NOT CUT!)
                             long totalFrames = vevnt.End.FrameCount - vevnt.Start.FrameCount;
@@ -50,7 +49,7 @@ namespace velocity_export
                                 for (int i = 0; i < totalFrames; i++)
                                 {
                                     double frameNumber = 0.0;
-                                    for (long f = 0; f < i; f++)
+                                    for (int f = 0; f < i; f++)
                                     {
                                         Timecode valueAt = Timecode.FromFrames(f);
                                         frameNumber += VelEnv.ValueAt(valueAt);
@@ -63,18 +62,19 @@ namespace velocity_export
                                 }
                                 cut.endFrame += cut.startFrame;
                             }
-                            video_cuts.Add(cut);
+                            veloSequence.Cuts.Add(cut);
                         }
                     }
                 }
             }
 
-            string velocityJson = JToken.FromObject(video_cuts).ToString(Formatting.Indented);
-            string outputPath = ShowSaveFileDialog("Velocity JSON file (*.json)|*.json",
-                                                   "Save Velocity as JSON // © SHEILAN",
+            //string velocityJson = JToken.FromObject(veloSequence.Cuts).ToString(Formatting.Indented);
+            string outputPath = ShowSaveFileDialog("Velocity file (*.velo)|*.velo",
+                                                   "Save Velocity // © SHEILAN",
                                                    videoName + "_cut");
+            veloSequence.SaveVelocityBin(outputPath);
             Directory.CreateDirectory(Path.GetDirectoryName(outputPath));
-            File.WriteAllText(outputPath, velocityJson);
+            //File.WriteAllText(outputPath, velocityJson);
         }
 
         private Envelope FindVEEnvelope(VideoEvent vevnt, EnvelopeType etype)
@@ -112,13 +112,9 @@ namespace velocity_export
                 saveFileDialog.FileName = Path.GetFileName(defaultFilename);
             }
             if (System.Windows.Forms.DialogResult.OK == saveFileDialog.ShowDialog())
-            {
                 return Path.GetFullPath(saveFileDialog.FileName);
-            }
             else
-            {
                 return null;
-            }
         }
 
     }
