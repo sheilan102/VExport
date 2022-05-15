@@ -18,6 +18,7 @@
 - New level sequence should be created with the suffix `_new`, with all the cuts and timescale keyframes.
 
 ## VELO file structure
+File starts with header
 ```cs
 struct VeloHeader
 {
@@ -25,7 +26,9 @@ struct VeloHeader
     ushort TargetFPS; // Final FPS
     byte VideoCutCount; // The count of cuts we have for that footage
 }
-
+```
+Following the header is a list of VideoCuts
+```cs
 struct VideoCut
 {
     uint startFrame; // Original Footage frame that cut starts from
