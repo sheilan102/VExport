@@ -32,9 +32,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ScriptPortal.Vegas, Version=16.0.0.352, Culture=neutral, PublicKeyToken=3cda94b1926e6fbc, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Program Files\VEGAS\VEGAS Pro 19.0\ScriptPortal.Vegas.dll</HintPath>
+    <Reference Include="ScriptPortal.Vegas">
+      <HintPath>..\..\..\Program Files\VEGAS\VEGAS Pro 19.0\ScriptPortal.Vegas.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
