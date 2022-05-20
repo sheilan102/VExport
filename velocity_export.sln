@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.902
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.31903.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "velocity_export", "Vegas/velocity_export.csproj", "{F98692E6-5B44-40F8-88E9-13FA136AFE9A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VExport", "VExport\VExport.csproj", "{16B5564C-747F-4063-AF60-344D05DDDB9D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F98692E6-5B44-40F8-88E9-13FA136AFE9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F98692E6-5B44-40F8-88E9-13FA136AFE9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F98692E6-5B44-40F8-88E9-13FA136AFE9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F98692E6-5B44-40F8-88E9-13FA136AFE9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16B5564C-747F-4063-AF60-344D05DDDB9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16B5564C-747F-4063-AF60-344D05DDDB9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16B5564C-747F-4063-AF60-344D05DDDB9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16B5564C-747F-4063-AF60-344D05DDDB9D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
