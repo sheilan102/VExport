@@ -43,8 +43,9 @@ namespace VExport
                             Timecode currentFrame = Timecode.FromFrames(i);
                             var timescale = VelEnv.ValueAt(currentFrame);
                             cut.endFrame = (int)Math.Round(frameNumber, MidpointRounding.AwayFromZero);
-                            if (!cut.velocity.ContainsKey(cut.endFrame))
-                                cut.velocity.Add(cut.endFrame, timescale);
+                            cut.Frames.Add(new Frame(cut.endFrame, timescale));
+                            //if (!cut.Frames.ContainsKey(cut.endFrame))
+                            //    cut.velocity.Add(cut.endFrame, timescale);
                         }
                         cut.endFrame += cut.startFrame;
                     }

@@ -10,7 +10,7 @@ namespace VExport
     {
         public int startFrame;
         public int endFrame;
-        public Dictionary<double, double> velocity = new Dictionary<double, double>();
+        public List<Frame> Frames = new List<Frame>();
     }
 
 }

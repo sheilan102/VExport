@@ -22,10 +22,10 @@ namespace VExport
                 {
                     writer.Write(cut.startFrame);
                     writer.Write(cut.endFrame);
-                    foreach (var frame in cut.velocity)
+                    foreach (var frame in cut.Frames)
                     {
-                        writer.Write(frame.Key);
-                        writer.Write(frame.Value);
+                        writer.Write(frame.OriginalFrameNumber);
+                        writer.Write(frame.Timescale);
                     }
                 }
             }
