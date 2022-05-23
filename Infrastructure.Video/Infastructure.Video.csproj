@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{16B5564C-747F-4063-AF60-344D05DDDB9D}</ProjectGuid>
+    <ProjectGuid>{BCF72192-26AE-4501-AA36-06467E385410}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>VExport</RootNamespace>
-    <AssemblyName>VExport</AssemblyName>
+    <RootNamespace>Infrastructure.Video</RootNamespace>
+    <AssemblyName>Infrastructure.Video</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -52,10 +52,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EntryPoint.cs" />
+    <Compile Include="Entities\Frame.cs" />
+    <Compile Include="Entities\Velocity.cs" />
+    <Compile Include="Entities\VideoCut.cs" />
+    <Compile Include="Interfaces\IVideoHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Utility\VegasUtil.cs" />
-    <Compile Include="Utility\VeloSaveFileDialog.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -77,12 +78,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Infrastructure.Video\Infastructure.Video.csproj">
-      <Project>{bcf72192-26ae-4501-aa36-06467e385410}</Project>
-      <Name>Infastructure.Video</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

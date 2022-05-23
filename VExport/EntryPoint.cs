@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using ScriptPortal.Vegas;
+using VideoInfrastructure.Entities;
 
 namespace VExport
 {
@@ -27,8 +28,9 @@ namespace VExport
                     // Video envelope
                     Envelope VelEnv = VegasUtil.FindVEEnvelope(vevnt, EnvelopeType.Velocity);
                     cut.startFrame = (int)vevnt.ActiveTake.Offset.FrameCount;
-                    // Total frames in vegas (NOT CUT!)
+                    // Frame count in vegas (NOT CUT!)
                     long totalFrames = vevnt.End.FrameCount - vevnt.Start.FrameCount;
+                    int OriginalFrame;
                     if (VelEnv != null)
                     {
                         // i = currentFrame
@@ -42,6 +44,7 @@ namespace VExport
                             }
                             Timecode currentFrame = Timecode.FromFrames(i);
                             var timescale = VelEnv.ValueAt(currentFrame);
+                            OriginalFrame = (int)Math.Round(frameNumber, MidpointRounding.AwayFromZero);
                             cut.endFrame = (int)Math.Round(frameNumber, MidpointRounding.AwayFromZero);
                             cut.Frames.Add(new Frame(cut.endFrame, timescale));
                             //if (!cut.Frames.ContainsKey(cut.endFrame))

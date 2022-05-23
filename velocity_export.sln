@@ -5,6 +5,8 @@ VisualStudioVersion = 17.1.31903.286
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VExport", "VExport\VExport.csproj", "{16B5564C-747F-4063-AF60-344D05DDDB9D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infastructure.Video", "Infrastructure.Video\Infastructure.Video.csproj", "{BCF72192-26AE-4501-AA36-06467E385410}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{16B5564C-747F-4063-AF60-344D05DDDB9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{16B5564C-747F-4063-AF60-344D05DDDB9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{16B5564C-747F-4063-AF60-344D05DDDB9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCF72192-26AE-4501-AA36-06467E385410}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCF72192-26AE-4501-AA36-06467E385410}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCF72192-26AE-4501-AA36-06467E385410}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCF72192-26AE-4501-AA36-06467E385410}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
