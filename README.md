@@ -1,4 +1,4 @@
-### Tested on VEGAS Pro 16+ & Unreal Engine 4.26
+# VExport - Vegas Pro velocity exporter
 
 ## Using export script
 
@@ -40,3 +40,5 @@ struct VideoCut
     Dictionary<double, double> Frames;
 }
 ```
+
+### Tested on VEGAS Pro 16+ & Unreal Engine 4.26
