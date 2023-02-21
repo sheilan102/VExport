@@ -9,7 +9,7 @@
 
 
 ## Using import scripts
-- Unreal Engine
+### Unreal Engine
 - Inside Unreal, go to Edit > Plugins, look for 'Python Editor Script Plugin' and Enable it (might ask for restart)
 - Locate the level sequence you rendered for Velocity in VEGAS
 - Make sure the start/end frames are the same as the footage you worked with in VEGAS
